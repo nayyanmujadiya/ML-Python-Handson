@@ -1,5 +1,5 @@
 import numpy as np
-from sys import getsizeof as size
+from sys import getsizeof as size 
 #with element
 a = np.array([24, 12, 57])
 print(size(a))
