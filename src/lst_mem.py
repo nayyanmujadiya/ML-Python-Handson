@@ -30,4 +30,5 @@ print("Emtpy list size: ", size(lst))
 We can conclude from this that for every new element, we need another eight bytes for the reference to the new object. The new integer object itself consumes 28 bytes. The size of a list "lst" without the size of the elements can be calculated with:
 
 64 + 8 * len(lst)
+To get the complete size of an arbitrary list of integers, we have to add the sum of all the sizes of the integers.
 '''
