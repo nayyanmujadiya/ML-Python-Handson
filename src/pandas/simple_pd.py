@@ -7,3 +7,9 @@ print(obj)
 print(obj.values)
 print(obj.index)  # like range(4)
 
+'''
+print(obj)
+obj.index = ['Bob', 'Steve', 'Jeff', 'Ryan']
+print(obj)
+'''
+
