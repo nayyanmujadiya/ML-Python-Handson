@@ -15,7 +15,7 @@ df = pd.read_csv('https://raw.githubusercontent.com/nayyanmujadiya/ML-Python-Han
 
 # Using scipy: Subtract the line of best fit
 from scipy import signal
-#df = pd.read_csv('https://raw.githubusercontent.com/selva86/datasets/master/a10.csv', parse_dates=['date'])
+
 df = pd.read_csv('https://raw.githubusercontent.com/nayyanmujadiya/ML-Python-Handson/master/dataset/ts/a10.csv', parse_dates=['date'])
 detrended = signal.detrend(df.value.values)
 plt.plot(detrended)
@@ -24,7 +24,7 @@ plt.show()
 
 # Using statmodels: Subtracting the Trend Component.
 from statsmodels.tsa.seasonal import seasonal_decompose
-#df = pd.read_csv('https://raw.githubusercontent.com/selva86/datasets/master/a10.csv', parse_dates=['date'], index_col='date')
+
 df = pd.read_csv('https://raw.githubusercontent.com/nayyanmujadiya/ML-Python-Handson/master/dataset/ts/a10.csv', parse_dates=['date'],index_col='date')
 result_mul = seasonal_decompose(df['value'], model='multiplicative', extrapolate_trend='freq')
 detrended = df.value.values - result_mul.trend
